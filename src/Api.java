@@ -5,7 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Api {
-    private static String apiUrl = "http://localhost:3000/api/champion";
+    private static String apiUrl = "https://proyecto-final-api-two.vercel.app/api/champion";
 
     public static String peticionApi() {
         try {

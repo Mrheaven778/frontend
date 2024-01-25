@@ -28,6 +28,11 @@ public class Json {
         }
             return Listcampeones;
     }
+    
+    
+    public static void conseguirDatosJSON() {
+    	
+    }
 
 
 }

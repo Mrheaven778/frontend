@@ -60,43 +60,14 @@ public class Ui {
 		JLabel lblTitulo = new JLabel("Proyecto Final Sergio Abrodes");
 		lblTitulo.setForeground(new Color(10, 189, 16));
 		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 19));
-		lblTitulo.setBounds(320, 31, 305, 62);
+		lblTitulo.setBounds(31, 39, 305, 62);
 		frame.getContentPane().add(lblTitulo);
 
-		JButton btnNewXml = new JButton("Crear XML");
-		btnNewXml.setForeground(new Color(255, 255, 255));
-		btnNewXml.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DOMXML dom = new DOMXML(campeones);
-				try {
-					dom.CrearXML("campeones.xml");
-
-				} catch (Exception IOException) {
-					System.out.println("Error al crear el archivo");
-				}
-			}
-		});
-		btnNewXml.setBorderPainted(false);
-		btnNewXml.setBackground(new Color(14, 89, 19));
-		btnNewXml.setBounds(31, 537, 105, 23);
-		frame.getContentPane().add(btnNewXml);
-
-		JButton btnCrearJson = new JButton("Crear JSON");
-		btnCrearJson.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnCrearJson.setForeground(Color.WHITE);
-		btnCrearJson.setBorderPainted(false);
-		btnCrearJson.setBackground(new Color(14, 89, 19));
-		btnCrearJson.setBounds(418, 537, 105, 23);
-		frame.getContentPane().add(btnCrearJson);
-
-		JButton btnVerDatos = new JButton("Ver Datos SQL");
+		JButton btnVerDatos = new JButton("Ver Datos");
 		btnVerDatos.setForeground(new Color(255, 255, 255));
 		btnVerDatos.setBorderPainted(false);
 		btnVerDatos.setBackground(new Color(14, 89, 19));
-		btnVerDatos.setBounds(669, 85, 136, 23);
+		btnVerDatos.setBounds(629, 130, 164, 23);
 		frame.getContentPane().add(btnVerDatos);
 
 		JScrollPane scrollPane = new JScrollPane();
@@ -118,17 +89,23 @@ public class Ui {
 			}
 		});
 
-		JButton btnVerDatosXML = new JButton("Ver Datos xml");
-		btnVerDatosXML.setForeground(Color.WHITE);
-		btnVerDatosXML.setBorderPainted(false);
-		btnVerDatosXML.setBackground(new Color(14, 89, 19));
-		btnVerDatosXML.setBounds(68, 85, 136, 23);
-		frame.getContentPane().add(btnVerDatosXML);
-		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Sacar datos XML", "Sacar datos API", "Sacar datos JSON"}));
-		comboBox.setBounds(418, 85, 207, 22);
+		comboBox.setModel(
+				new DefaultComboBoxModel(new String[] { "Sacar datos XML", "Sacar datos API", "Sacar datos JSON" }));
+		comboBox.setBounds(100, 130, 519, 22);
 		frame.getContentPane().add(comboBox);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Escribir a XML", "Escribir a JSON", "Escribir a SQL"}));
+		comboBox_1.setBounds(274, 484, 519, 22);
+		frame.getContentPane().add(comboBox_1);
+		
+		JButton btnConvertir = new JButton("Escribir datos ");
+		btnConvertir.setForeground(Color.WHITE);
+		btnConvertir.setBorderPainted(false);
+		btnConvertir.setBackground(new Color(14, 89, 19));
+		btnConvertir.setBounds(100, 484, 164, 23);
+		frame.getContentPane().add(btnConvertir);
 		table.getColumnModel().getColumn(0).setPreferredWidth(98);
 		table.getColumnModel().getColumn(1).setPreferredWidth(107);
 		table.getColumnModel().getColumn(4).setPreferredWidth(115);
@@ -136,42 +113,60 @@ public class Ui {
 		table.getColumnModel().getColumn(6).setPreferredWidth(107);
 		DefaultTableModel model = (DefaultTableModel) table.getModel();
 		table.setVisible(false);
-
-		btnVerDatosXML.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				campeones.clear();
-				model.setRowCount(0);
-				campeones = DOMXML.sacarDatosXML();
-				for (Campeon campeon : campeones) {
-					model.addRow(new Object[] { campeon.getId(), campeon.getName(), campeon.getRole(),
-							campeon.getLane(), campeon.getAttackType(), campeon.getDifficulty(),
-							campeon.getReleaseYear(), campeon.getLore() });
-				}
-				scrollPane.setVisible(true);
-				table.setVisible(true);
-				btnVerDatosXML.setEnabled(false);
-			}
-		});
 		btnVerDatos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				campeones.clear();
 				model.setRowCount(0);
-				String response = Api.peticionApi();
-				if (response != null) {
-					System.out.println("La api no responde ");
+				scrollPane.setVisible(false);
+				table.setVisible(false);
+				if (comboBox.getSelectedItem().equals("Sacar datos XML")) {
+					campeones = DOMXML.sacarDatosXML();
+					for (Campeon campeon : campeones) {
+						model.addRow(new Object[] { campeon.getId(), campeon.getName(), campeon.getRole(),
+								campeon.getLane(), campeon.getAttackType(), campeon.getDifficulty(),
+								campeon.getReleaseYear(), campeon.getLore() });
+					}
+					scrollPane.setVisible(true);
+					table.setVisible(true);
 				}
-				System.out.println(response);
-				Json.guardadDatos(response);
-				campeones = Json.getChapeones(response);
-				for (Campeon campeon : campeones) {
-					model.addRow(new Object[] { campeon.getId(), campeon.getName(), campeon.getRole(),
-							campeon.getLane(), campeon.getAttackType(), campeon.getDifficulty(),
-							campeon.getReleaseYear(), campeon.getLore() });
+				if (comboBox.getSelectedItem().equals("Sacar datos API")) {
+					String response = Api.peticionApi();
+					if (response != null) {
+						System.out.println("La api no responde ");
+					}
+					System.out.println(response);
+					Json.guardadDatos(response);
+					campeones = Json.getChapeones(response);
+					for (Campeon campeon : campeones) {
+						model.addRow(new Object[] { campeon.getId(), campeon.getName(), campeon.getRole(),
+								campeon.getLane(), campeon.getAttackType(), campeon.getDifficulty(),
+								campeon.getReleaseYear(), campeon.getLore() });
+					}
+					scrollPane.setVisible(true);
+					table.setVisible(true);
 				}
-				scrollPane.setVisible(true);
-				table.setVisible(true);
-				btnVerDatos.setEnabled(false);
+				if (comboBox.getSelectedItem().equals("Sacar datos JSON")) {
+					campeones = Json.getChapeones(Json.conseguirDatosJSON());
+					for (Campeon campeon : campeones) {
+						model.addRow(new Object[] { campeon.getId(), campeon.getName(), campeon.getRole(),
+								campeon.getLane(), campeon.getAttackType(), campeon.getDifficulty(),
+								campeon.getReleaseYear(), campeon.getLore() });
+					}
+					scrollPane.setVisible(true);
+					table.setVisible(true);
+				}
+			}
+		});
+		btnConvertir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (comboBox_1.getSelectedItem().equals("Escribir a XML")) {
+					try {
+						DOMXML domxml = new DOMXML(campeones);
+						domxml.CrearXML("campeones.xml");
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+				}
 			}
 		});
 

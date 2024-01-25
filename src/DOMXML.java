@@ -32,7 +32,6 @@ public class DOMXML {
 	}
 
 	public void CrearXML(String nombreArchivo) throws Exception {
-
 		Document doc = crearDoc().newDocument();
 		Element rootElement = doc.createElement("campeones");
 		doc.appendChild(rootElement);

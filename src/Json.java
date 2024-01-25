@@ -30,7 +30,21 @@ public class Json {
     }
     
     
-    public static void conseguirDatosJSON() {
+    public static String  conseguirDatosJSON() {
+        try {
+            FileReader reader = new FileReader("datosCampeones.json");
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String line;
+            String data = "";
+            while ((line = bufferedReader.readLine()) != null) {
+                data += line;
+            }
+            reader.close();
+            return data;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     	
     }
 

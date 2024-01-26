@@ -105,6 +105,7 @@ public class Ui {
 		btnConvertir.setBorderPainted(false);
 		btnConvertir.setBackground(new Color(14, 89, 19));
 		btnConvertir.setBounds(100, 484, 164, 23);
+		btnConvertir.setEnabled(false);
 		frame.getContentPane().add(btnConvertir);
 		table.getColumnModel().getColumn(0).setPreferredWidth(98);
 		table.getColumnModel().getColumn(1).setPreferredWidth(107);
@@ -115,7 +116,6 @@ public class Ui {
 		table.setVisible(false);
 		btnVerDatos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				campeones.clear();
 				model.setRowCount(0);
 				scrollPane.setVisible(false);
 				table.setVisible(false);
@@ -155,6 +155,7 @@ public class Ui {
 					scrollPane.setVisible(true);
 					table.setVisible(true);
 				}
+				btnConvertir.setEnabled(true);
 			}
 		});
 		btnConvertir.addActionListener(new ActionListener() {
@@ -166,6 +167,12 @@ public class Ui {
 					} catch (Exception e1) {
 						e1.printStackTrace();
 					}
+				}
+				if (comboBox_1.getSelectedItem().equals("Escribir a JSON")) {
+					Json.guardadDatos(Json.conseguirDatosJSON());
+				}
+				if (comboBox_1.getSelectedItem().equals("Escribir a SQL")) {
+					Api.peticionApiPost(campeones);
 				}
 			}
 		});

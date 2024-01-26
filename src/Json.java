@@ -3,13 +3,11 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 
 public class Json {
     public static void guardadDatos(String datos) {
-        try (FileWriter myWriter = new FileWriter("champions.json");) {
+        try (FileWriter myWriter = new FileWriter("champions.json")) {
             myWriter.write(datos);
             System.out.println("Se ha guardado el archivo");
         } catch (IOException e) {
@@ -28,9 +26,8 @@ public class Json {
         }
             return Listcampeones;
     }
-    
-    
-    public static String  conseguirDatosJSON() {
+
+    public static String conseguirDatosJSON() {
         try {
             FileReader reader = new FileReader("datosCampeones.json");
             BufferedReader bufferedReader = new BufferedReader(reader);

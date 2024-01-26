@@ -16,7 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
-public class Ui {
+public class Main {
 
 	private static ArrayList<Campeon> campeones = new ArrayList();
 	private JFrame frame;
@@ -30,7 +30,7 @@ public class Ui {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Ui window = new Ui();
+					Main window = new Main();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,7 +42,7 @@ public class Ui {
 	/**
 	 * Create the application.
 	 */
-	public Ui() {
+	public Main() {
 		initialize();
 	}
 

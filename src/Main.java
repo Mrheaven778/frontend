@@ -1,20 +1,9 @@
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import java.awt.Font;
-import java.awt.Color;
-import javax.swing.JButton;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.awt.event.ActionEvent;
-import javax.swing.JTextArea;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.JScrollPane;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
 
 public class Main {
 
@@ -94,12 +83,13 @@ public class Main {
 				new DefaultComboBoxModel(new String[] { "Sacar datos XML", "Sacar datos API", "Sacar datos JSON" }));
 		comboBox.setBounds(100, 130, 519, 22);
 		frame.getContentPane().add(comboBox);
-		
+
 		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Escribir a XML", "Escribir a JSON", "Escribir a SQL"}));
+		comboBox_1.setModel(
+				new DefaultComboBoxModel(new String[] { "Escribir a XML", "Escribir a JSON", "Escribir a SQL" }));
 		comboBox_1.setBounds(274, 484, 519, 22);
 		frame.getContentPane().add(comboBox_1);
-		
+
 		JButton btnConvertir = new JButton("Escribir datos ");
 		btnConvertir.setForeground(Color.WHITE);
 		btnConvertir.setBorderPainted(false);
@@ -107,6 +97,16 @@ public class Main {
 		btnConvertir.setBounds(100, 484, 164, 23);
 		btnConvertir.setEnabled(false);
 		frame.getContentPane().add(btnConvertir);
+
+		JButton btnNewButton = new JButton("Crear Informe");
+		btnNewButton.setEnabled(false);
+		btnNewButton.setForeground(Color.WHITE);
+		btnNewButton.setBorderPainted(false);
+		btnNewButton.setBackground(new Color(14, 89, 19));
+
+
+		btnNewButton.setBounds(629, 63, 164, 23);
+		frame.getContentPane().add(btnNewButton);
 		table.getColumnModel().getColumn(0).setPreferredWidth(98);
 		table.getColumnModel().getColumn(1).setPreferredWidth(107);
 		table.getColumnModel().getColumn(4).setPreferredWidth(115);
@@ -156,6 +156,8 @@ public class Main {
 					table.setVisible(true);
 				}
 				btnConvertir.setEnabled(true);
+				btnNewButton.setEnabled(true);
+				
 			}
 		});
 		btnConvertir.addActionListener(new ActionListener() {
@@ -174,6 +176,11 @@ public class Main {
 				if (comboBox_1.getSelectedItem().equals("Escribir a SQL")) {
 					Api.peticionApiPost(campeones);
 				}
+			}
+		});
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Pdf.generarPDF(campeones,"Informe.pdf");
 			}
 		});
 

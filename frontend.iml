@@ -10,5 +10,6 @@
     <orderEntry type="library" name="jar_files" level="project" />
     <orderEntry type="library" name="json-20231013" level="project" />
     <orderEntry type="library" name="itext-2.1.7" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

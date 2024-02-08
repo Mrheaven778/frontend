@@ -1,8 +1,12 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+
+import net.sf.jasperreports.engine.JRException;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Main {
@@ -181,6 +185,12 @@ public class Main {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Pdf.generarPDF(campeones,"Informe.pdf");
+				try {
+					Pdf.generPDFJasper(campeones);
+				} catch (FileNotFoundException | JRException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 

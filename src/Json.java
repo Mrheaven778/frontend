@@ -16,15 +16,14 @@ public class Json {
         }
     }
 
-    public static ArrayList<Campeon>  getChapeones(String json) {
+    public static void getChapeones(String json, ArrayList<Campeon> campeones) {
+            campeones.clear();
             JSONArray jsonArray = new JSONArray(json);
-            ArrayList<Campeon> Listcampeones = new ArrayList<>();
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
             Campeon campeon = new Campeon(jsonObject.getString("id"), jsonObject.getString("name"), jsonObject.getString("role"), jsonObject.getString("lane"), jsonObject.getString("attackType"), jsonObject.getInt("difficulty"), jsonObject.getInt("releaseYear"), jsonObject.getString("lore"));
-            Listcampeones.add(campeon);
+            campeones.add(campeon);
         }
-            return Listcampeones;
     }
 
     public static String conseguirDatosJSON() {

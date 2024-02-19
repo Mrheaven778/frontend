@@ -18,13 +18,7 @@
 		<attackType type="string">Rango</attackType>
 		<difficulty type="int">5</difficulty>
 		<releaseYear type="int">2011</releaseYear>
-		<lore type="string">Ahri es una vastaya con forma de zorro que puede
-			manipular la magia. Sus encantadores movimientos y sus esquivas
-			tácticas desconciertan a sus rivales antes de aniquilarlos con una
-			explosión de energía. Nació de la magia pura y unió su esencia a un
-			antiguo pozo espiritual para conseguir una forma física. Ahora,
-			acecha entre los poblados cercanos, buscando absorber la esencia
-			vital de sus cautivos.</lore>
+		<lore type="string">Ahri es una vastaya con forma de zorro que puede manipular la magia. Sus encantadores movimientos y sus esquivas tácticas desconciertan a sus rivales antes de aniquilarlos con una explosión de energía. Nació de la magia pura y unió su esencia a un antiguo pozo espiritual para conseguir una forma física. Ahora, acecha entre los poblados cercanos, buscando absorber la esencia vital de sus cautivos.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">c91822e7-ebc9-44e5-a734-97bb8f856deb</id>
@@ -34,10 +28,7 @@
 		<attackType type="string">Melee</attackType>
 		<difficulty type="int">2</difficulty>
 		<releaseYear type="int">2012</releaseYear>
-		<lore type="string">Darius, el Hand of Noxus, es un guerrero orgulloso y
-			temido por igual por aliados y enemigos. Provisto de una inmensa
-			hacha y una moral inquebrantable, Darius se enfrenta a sus enemigos
-			con fuerza bruta y despiadada, buscando la gloria de Noxus.</lore>
+		<lore type="string">Darius, el Hand of Noxus, es un guerrero orgulloso y temido por igual por aliados y enemigos. Provisto de una inmensa hacha y una moral inquebrantable, Darius se enfrenta a sus enemigos con fuerza bruta y despiadada, buscando la gloria de Noxus.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">6ed6e3a4-af1b-42e6-857f-2e95b0e5118d</id>
@@ -47,11 +38,7 @@
 		<attackType type="string">Rango</attackType>
 		<difficulty type="int">6</difficulty>
 		<releaseYear type="int">2013</releaseYear>
-		<lore type="string">Jinx es una caótica y maníaca criminal con una
-			obsesión por las explosiones y el caos. Armada con una gran variedad
-			de armas improvisadas, Jinx deja un rastro de destrucción a su paso
-			mientras se burla de la ley y disfruta cada momento del caos que
-			crea.</lore>
+		<lore type="string">Jinx es una caótica y maníaca criminal con una obsesión por las explosiones y el caos. Armada con una gran variedad de armas improvisadas, Jinx deja un rastro de destrucción a su paso mientras se burla de la ley y disfruta cada momento del caos que crea.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">f8d3def7-5de8-4d88-8e32-3ab7682282f2</id>
@@ -61,11 +48,7 @@
 		<attackType type="string">Rango</attackType>
 		<difficulty type="int">7</difficulty>
 		<releaseYear type="int">2011</releaseYear>
-		<lore type="string">Orianna, la Dama Mecánica, es una creación mecánica
-			impulsada por la conciencia de una niña. Con su esfera flotante,
-			Orianna manipula la magia para controlar el campo de batalla y
-			proteger a la niña a la que está unida, mientras busca comprender su
-			propia existencia.</lore>
+		<lore type="string">Orianna, la Dama Mecánica, es una creación mecánica impulsada por la conciencia de una niña. Con su esfera flotante, Orianna manipula la magia para controlar el campo de batalla y proteger a la niña a la que está unida, mientras busca comprender su propia existencia.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">d7568fac-263e-4c15-947f-d8c6a7dba909</id>
@@ -75,10 +58,7 @@
 		<attackType type="string">Melee</attackType>
 		<difficulty type="int">6</difficulty>
 		<releaseYear type="int">2011</releaseYear>
-		<lore type="string">Lee Sin, el Monje Ciego, es un maestro de las artes
-			marciales que perdió la vista durante una misión. A pesar de su
-			ceguera, Lee Sin canaliza su energía espiritual para enfrentarse a
-			sus enemigos con destreza y fuerza incomparables.</lore>
+		<lore type="string">Lee Sin, el Monje Ciego, es un maestro de las artes marciales que perdió la vista durante una misión. A pesar de su ceguera, Lee Sin canaliza su energía espiritual para enfrentarse a sus enemigos con destreza y fuerza incomparables.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">d9230e44-b419-434e-a2b3-faa513c28705</id>
@@ -88,11 +68,7 @@
 		<attackType type="string">Rango</attackType>
 		<difficulty type="int">3</difficulty>
 		<releaseYear type="int">2020</releaseYear>
-		<lore type="string">Seraphine, la Estrella del Escenario, es una
-			cantante y compositora que descubre su conexión con la magia del
-			alma de Runaterra. Con su habilidad para sentir y amplificar las
-			emociones, Seraphine busca unir a las personas a través de su
-			música.</lore>
+		<lore type="string">Seraphine, la Estrella del Escenario, es una cantante y compositora que descubre su conexión con la magia del alma de Runaterra. Con su habilidad para sentir y amplificar las emociones, Seraphine busca unir a las personas a través de su música.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">bf55e3b3-c20e-4da6-9793-41a90fd3a957</id>
@@ -102,11 +78,7 @@
 		<attackType type="string">Rango</attackType>
 		<difficulty type="int">7</difficulty>
 		<releaseYear type="int">2013</releaseYear>
-		<lore type="string">Thresh, el Recolector de Almas, es un espíritu
-			sádico que atrapa las almas de los vivos para torturarlas en su
-			linterna. Thresh disfruta de la desesperación de sus presas mientras
-			manipula las cadenas de la muerte para atraparlas en su oscuro
-			destino.</lore>
+		<lore type="string">Thresh, el Recolector de Almas, es un espíritu sádico que atrapa las almas de los vivos para torturarlas en su linterna. Thresh disfruta de la desesperación de sus presas mientras manipula las cadenas de la muerte para atraparlas en su oscuro destino.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">21c98792-4be8-466b-8113-b1c13670ac65</id>
@@ -116,10 +88,7 @@
 		<attackType type="string">Melee</attackType>
 		<difficulty type="int">10</difficulty>
 		<releaseYear type="int">2013</releaseYear>
-		<lore type="string">Yasuo, el Imperdonable, es un guerrero errante con
-			una habilidad excepcional para controlar el viento. A pesar de ser
-			acusado injustamente de asesinar a su maestro, Yasuo busca la verdad
-			mientras lucha contra la tormenta que lo persigue.</lore>
+		<lore type="string">Yasuo, el Imperdonable, es un guerrero errante con una habilidad excepcional para controlar el viento. A pesar de ser acusado injustamente de asesinar a su maestro, Yasuo busca la verdad mientras lucha contra la tormenta que lo persigue.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">50ae96f1-ec06-4c61-a8a0-2afdf778a60e</id>
@@ -129,10 +98,7 @@
 		<attackType type="string">Rango</attackType>
 		<difficulty type="int">5</difficulty>
 		<releaseYear type="int">2010</releaseYear>
-		<lore type="string">Lux, la Dama Luminosa, es una maga de Demacia que
-			controla la luz para proteger a su reino. Con su destreza en la
-			magia de la luz, Lux enfrenta las amenazas con elegancia y
-			determinación, buscando justicia para su tierra natal.</lore>
+		<lore type="string">Lux, la Dama Luminosa, es una maga de Demacia que controla la luz para proteger a su reino. Con su destreza en la magia de la luz, Lux enfrenta las amenazas con elegancia y determinación, buscando justicia para su tierra natal.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">09cfe668-9396-4276-866a-60f72bab8320</id>
@@ -142,10 +108,7 @@
 		<attackType type="string">Melee</attackType>
 		<difficulty type="int">2</difficulty>
 		<releaseYear type="int">2009</releaseYear>
-		<lore type="string">Malphite, el Fragmento del Monolito, es una criatura
-			de piedra viviente. Con su imponente presencia y cuerpo de roca
-			sólida, Malphite se lanza contra sus enemigos como un coloso
-			inquebrantable, buscando proteger la armonía natural de Runaterra.</lore>
+		<lore type="string">Malphite, el Fragmento del Monolito, es una criatura de piedra viviente. Con su imponente presencia y cuerpo de roca sólida, Malphite se lanza contra sus enemigos como un coloso inquebrantable, buscando proteger la armonía natural de Runaterra.</lore>
 	</campeon>
 	<campeon>
 		<id type="string">4717ba88-9567-4b50-acf0-0ffb468b9cb6</id>
@@ -155,9 +118,6 @@
 		<attackType type="string">Melee</attackType>
 		<difficulty type="int">8</difficulty>
 		<releaseYear type="int">2009</releaseYear>
-		<lore type="string">Katarina, la Cuchilla Siniestra, es una asesina de
-			Noxus con una agilidad y destreza asombrosas. Con su habilidad para
-			girar y lanzar dagas con precisión mortal, Katarina persigue la
-			gloria y la admiración en el campo de batalla.</lore>
+		<lore type="string">Katarina, la Cuchilla Siniestra, es una asesina de Noxus con una agilidad y destreza asombrosas. Con su habilidad para girar y lanzar dagas con precisión mortal, Katarina persigue la gloria y la admiración en el campo de batalla.</lore>
 	</campeon>
 </campeones>

@@ -100,12 +100,11 @@ public class DOMXML {
 	}
 
 
-	public static ArrayList<Campeon> sacarDatosXML() {
+	public static void sacarDatosXML(ArrayList<Campeon> campeones) {
 		try {
 			// Crear un DocumentBuilder
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();
-			ArrayList<Campeon> campeones = new ArrayList<Campeon>();
 
 			// Parsear el archivo XML
 			Document document = builder.parse("datosCampeones.xml");
@@ -143,10 +142,8 @@ public class DOMXML {
 					campeones.add(new Campeon(id, name, role, lane, attackType, difficulty, releaseYear, lore));
 				}
 			}
-			return campeones;
 		} catch (Exception e) {
 			e.printStackTrace();
-			return null;
 		}
 	}
 
